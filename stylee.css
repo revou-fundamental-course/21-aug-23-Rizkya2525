@@ -1,0 +1,77 @@
+
+    .logo {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+    }
+
+    .tm-nav-ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tm-nav-li {
+    list-style: none;
+    display: block;
+    margin-bottom: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .tm-nav-link {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.tm-nav-ul{
+  border-bottom: 1px solid #000;
+}
+.tm-header {
+  border-top: 1px solid #000;
+}
+.website{
+    border-bottom: 1px solid #000;
+}
+.website{
+    height: 500px;
+}
+.autoslide{
+  display: block;
+  width: 800px;
+  height: 400px;
+}
+.image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.facilitation{
+    border-bottom: 1px solid #000;
+}
+.facilitation{
+    height: 300px;
+}
+.message-form-container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .message-form-container form,
+    .message-form-container .result-container {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .result-container {
+      border: 1px solid black; 
+      width: 400px; /* Lebar kotak */
+    height: 200px;
+    
+    }
+    
+    .result-container{
+    position: absolute;
+    top: 170%; /* Atur posisi vertikal di tengah */
+    right: 20px; /* Jarak dari sisi kanan */
+    transform: translateY(-50%); 
+    }

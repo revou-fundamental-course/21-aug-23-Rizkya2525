@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mywebsite.com</title>
+</head>
+
+<style>
+    .logo {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+    }
+
+    .tm-nav-ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tm-nav-li {
+    list-style: none;
+    display: block;
+    margin-bottom: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .tm-nav-link {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.tm-nav-ul{
+  border-bottom: 1px solid #000;
+}
+.tm-header {
+  border-top: 1px solid #000;
+}
+.website{
+    border-bottom: 1px solid #000;
+}
+.website{
+    height: 500px;
+}
+.autoslide{
+  display: block;
+  width: 800px;
+  height: 400px;
+}
+.image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.facilitation{
+    border-bottom: 1px solid #000;
+}
+.facilitation{
+    height: 300px;
+}
+.message-form-container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .message-form-container form,
+    .message-form-container .result-container {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .result-container {
+      border: 1px solid black; 
+      width: 400px; /* Lebar kotak */
+    height: 200px;
+    
+    }
+    
+    .result-container{
+    position: absolute;
+    top: 170%; /* Atur posisi vertikal di tengah */
+    right: 20px; /* Jarak dari sisi kanan */
+    transform: translateY(-50%); 
+    }
+
+</style>
+<body>
+    <div class="tm-header">
+    <img src="https://feb.umri.ac.id/wp-content/uploads/2018/06/LOGO-UMRI-COLOR-ORI.png" alt="logo" class="logo" /> 
+    </div>
+
+
+<nav class="col-md-6 col-12 tm-nav">
+    <ul class="tm-nav-ul">
+        <li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
+        <li class="tm-nav-li"><a href="our.html" class="tm-nav-link">Our Profile</a></li>
+        <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Achievement</a></li>
+        <li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">Message Us</a></li>
+    </ul>
+</nav>
+
+<div class = website>	
+<h3>Hi <span id="nama"></span>,Welcome To Website</h3>
+<center><img src="https://cdn2.tstatic.net/tribunpekanbaruwiki/foto/bank/images/universitas-muhammadiyah-riau.jpg" alt="gambar" class="gambar"/></center>
+</div>
+
+<div class="facilitation">
+    <h2>Our Facilitation</h2>
+    <img src="https://keperawatan.unri.ac.id/wp-content/uploads/2018/12/perpustakaan-1.jpg" alt="Logo" class="image"/> 
+    <img src="https://pti.fkip.umri.ac.id/asset/img_galeri/lab2.jpg" alt="Logo" class="image"/>
+    <img src="https://feb.umri.ac.id/wp-content/uploads/2019/08/Lapangan-parkir.jpg" alt="Logo" class="image"/>
+    <img src="https://feb.umri.ac.id/wp-content/uploads/2019/08/Ruang-Kelas-Besar.jpg" alt="Logo" class="image"/>
+    <img src="https://bertuahpos.com/wp-content/uploads/2023/06/IMG-20230615-WA0045.jpg" alt="Logo" class="image"/>
+</div>
+
+<h2>Message Us</h2>
+<div class="message-form-container">
+<form name="message-form" onsubmit="return validateform()">
+  nama: <input placeholder="Nama" type="text" name="full-name"/>
+  <br/><br>
+
+  Tanggal Lahir:
+  <input type="date" name="birth-date"/>
+  <br/><br>
+
+  Jenis Kelamin:
+  <input type="radio" name="gender" id="male" value="male"/>
+  <label for="male">Laki-laki</label>
+  <input type="radio" name="gender" id="female" value="female"/>
+  <label for="female">Perempuan</label>
+<br/><br>
+  Pesan:
+  <textarea placeholder="Pesan" name="messages"></textarea>
+  <br/><br>
+
+  <input type="submit" value="Submit"/>
+</div>
+</form>
+
+<div class="result-container">
+  <p>Nama: <span id="sender-full-name"></span></p>
+  <p>Tanggal lahir: <span id="sender-birth-date"></span></p>
+  <p>Jenis kelamin: <span id="sender-gender"></span></p>
+  <p>Pesan: <span id="sender-messages"></span></p>
+</div>
+  
+  <script>
+    var name = prompt("masukkan nama kamu");
+    document.getElementById("nama").innerText=name;
+
+
+    function validateform() {
+        var fullName = document.forms["message-form"]["full-name"].value;
+        var birthDate = document.forms["message-form"]["birth-date"].value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var messages = document.forms["message-form"]["messages"].value;
+
+        document.getElementById("sender-full-name").textContent = fullName;
+        document.getElementById("sender-birth-date").textContent = birthDate;
+        document.getElementById("sender-gender").textContent = gender ? gender.value : "";
+        document.getElementById("sender-messages").textContent = messages;
+
+        return false; // Prevent the form from actually submitting
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* Reset CSS untuk menghilangkan margin dan padding default */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Times, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Gaya untuk header */
+.header {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Gaya untuk kontainer utama */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk gambar universitas */
+.university-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.university-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk bagian deskripsi, sejarah, visi & misi, dan alamat */
+.description, .sejarah, .vision-mission, .address {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.sejarah h2, .vision-mission h2, .address h2 {
+    margin-top: 0;
+}
